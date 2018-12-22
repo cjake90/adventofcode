@@ -8,12 +8,6 @@ from day4classes import EventType
 input_file = open('input.txt', 'r')
 events_list = input_file.readlines()
 
-#sort the events chronologically
-events_list.sort()
-with open('sorted.txt', 'w') as s:
-    for item in events_list:
-        s.write(item)
-
 #creates a list of guards for tracking each guard's status
 guard_status   = [Guard() for x in range(10000)]
 active_guard   = 0
